@@ -1,23 +1,28 @@
 package utils;
 
+import objects.Character;
+
+import java.awt.*;
 import java.util.ArrayList;
 
 public class MapGen {
 
-    ArrayList<Character> map;
+    static ArrayList<objects.Character> map;
 
     public MapGen() {}
 
-    public ArrayList<Character>  generateMap(int size, int fontSize) {
+    public static ArrayList<objects.Character>  generateMap(int mapSize, int fontSize) {
 
-        map = new ArrayList<Character>();
+        map = new ArrayList<objects.Character>();
 
-        for (int x = 0; x < size; x++) {
-            for (int y = 0; y < size; y++) {
-                int posX = (x * fontSize) + 4;
-                int posY = (y * fontSize) + 20;
+        for (int y = 0; y < mapSize; y++) {
+            for (int x = 0; x < mapSize; x++) {
 
-                map.add(new Character("@", posX, posY, "BLACK"));
+                if(x==(5) && y>=(0)) {
+                    map.add(new Character("⬛", Color.ORANGE, "SAND"));
+                } else {
+                    map.add(new Character("⬜", Color.BLACK, "AIR"));
+                }
             }
         }
 
