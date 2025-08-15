@@ -14,7 +14,7 @@ public class MapUpdate {
         int height = mapSize;
         int width = mapSize;
         int indexBottomLimit = Conversions.getBottomLimit(width, map.size());
-        System.out.println("indexBottomLimit: "+indexBottomLimit);
+//        System.out.println("indexBottomLimit: "+indexBottomLimit);
 
         for (int y = height-1; y >= 0; y--) {
             for (int x = width-1; x > 0; x--) {
@@ -24,10 +24,10 @@ public class MapUpdate {
 
                 if (selectedCharacter.getType() != "AIR" && selectedCharacter.getType() == "SAND") {
 
-                System.out.println(MessageFormat.format("""
-                        =====CURRENT CHARACTER: {0} {1} ============================================================
-                        MATRIX INDEX [{2},{3}] ARRAY INDEX: {4}
-                        """, selectedCharacter.getCharacter() ,selectedCharacter.getType(), x,y, index));
+//                System.out.println(MessageFormat.format("""
+//                        =====CURRENT CHARACTER: {0} {1} ============================================================
+//                        MATRIX INDEX [{2},{3}] ARRAY INDEX: {4}
+//                        """, selectedCharacter.getCharacter() ,selectedCharacter.getType(), x,y, index));
 
 
                     int belowIndex = (y + 1) * width + x;

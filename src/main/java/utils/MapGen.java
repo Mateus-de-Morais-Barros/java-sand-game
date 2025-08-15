@@ -18,7 +18,7 @@ public class MapGen {
         for (int y = 0; y < mapSize; y++) {
             for (int x = 0; x < mapSize; x++) {
 
-                if(x==(5) && y>=(0)) {
+                if(x==(10) && y>=(0)) {
                     map.add(new Character("⬛", Color.ORANGE, "SAND"));
                 } else {
                     map.add(new Character("⬜", Color.BLACK, "AIR"));
